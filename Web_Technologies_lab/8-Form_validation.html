@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+</title>
+<style>
+button{
+cursor:pointer;
+}
+#tej
+{
+pointer-events:none;
+cursor:none;
+}
+</style>
+</head>
+<body>
+<h1>Form Validation</h1>
+<form id="myForm">
+Enter UserName:<input id="userid" type="text" required="true">
+Enter your password:<input id="pass" type="password" required="true">
+<button onclick="validate()">Validate</button>
+<button id="tej">Submit</button>
+<button onclick="clearForm()">Clear Form</button>
+</form>
+</body>
+<script>
+const validate = () =>
+{
+let userid=document.getElementById("userid").value;
+let pass=document.getElementById("pass").value;
+if(userid.length==0){
+alert("please enter your user id");
+}
+if (pass.length<6){
+alert("Password must be of length atleast 6 digits");
+}
+else{
+alert("You have Successfully Validated");
+}
+}
+function clearForm(){
+let userid=document.getElementById("userid").value;
+let pass=document.getElementById("pass").value;
+let r=document.getElementById("myForm");
+userDecision=window.confirm("Do you want to clear the form ?");
+if(userDecision)
+{
+console.log(userid);
+console.log(pass);
+userid="";
+pass="";
+}
+
+}
+</script>
+</html>

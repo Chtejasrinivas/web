@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1> fibonacci seris </h1>
+</body>
+<script>
+let number=parseInt(prompt("Enter a Number"));
+if(number==''){
+alert("Please Enter a number");
+}
+let a=0,b=1,c;
+console.log("Fibonacci Series");
+c=a+b;
+while(c<=number){
+console.log(c);
+a=b;
+b=c;
+c=a+b;
+}
+</script>
+</html>

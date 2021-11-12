@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Encryption and Decryption
+</title>
+</head>
+<body>
+<h1>Choose Your Option</h1>
+<button id="encrypt" onclick="encryption()">Encrypt a Number</button>
+<button id="decrypt" onclick="decryption()">Decrypt a Number</button>
+<h1>The Entered number is : <span id="display"></span></h1>
+<h1>The <span id="option">Encrypted</span> number is : <span id="output"></span></h1>
+
+</body>
+<script>
+let disp=document.getElementById("display");
+let option=document.getElementById("option");
+let output=document.getElementById("output");
+//Function for Encryption
+function encryption()
+{
+let input = window.prompt("Enter a Four digit Number Encrypt");
+let number = parseInt(input);
+for(let i=0;i<input.length;i++)
+{
+digit=number%10;
+digit = (Math.round(digit+ (7%10)))%10;
+if(i==0)
+{
+digit4=digit;
+}
+if(i==1)
+{
+digit3=digit;
+}
+if(i==2)
+{
+digit2=digit;
+}
+if(i==3)
+{
+digit1=digit;
+}
+number=number/10;
+}
+disp.innerText=input;
+//Swapping Of Numbers
+temp = digit3;
+digit3=digit1;
+digit1=temp;
+
+temp=digit2;
+digit2=digit4;
+digit4=temp;
+
+output.innerText=`${digit1}${digit2}${digit3}${digit4}`;
+}
+
+
+//Function for Decryption
+function decryption()
+{
+let digit1=digit2=digit3=digit4=0;
+let input=window.prompt("please enter a number to decrypt");
+disp.innerText=input;
+let number = parseInt(input);
+for(let i=0;i<input.length;i++)
+{
+digit=number%10;
+digit = (Math.floor(digit + 3))%10;
+if(i==0)
+{
+digit4=digit;
+}
+if(i==1)
+{
+digit3=digit;
+}
+if(i==2)
+{
+digit2=digit;
+}
+if(i==3)
+{
+digit1=digit;
+}
+number=number/10;
+}
+//Swapping Of Numbers
+temp = digit3;
+digit3=digit1;
+digit1=temp;
+
+temp=digit2;
+digit2=digit4;
+digit4=temp;
+
+output.innerText=`${digit1}${digit2}${digit3}${digit4}`;
+}
+</script>
+</html>

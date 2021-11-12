@@ -1,0 +1,5 @@
+SETTING NORMAL JAVA PATH
+
+set path=C:\Program Files\Java\jre1.8.0_181\bin
+set classpath=C:\Program Files\Java\jre1.8.0_181\lib:.
+set classpath=C:\Program Files (x86)\Apache Software Foundation\Tomcat 5.5\common\lib:.

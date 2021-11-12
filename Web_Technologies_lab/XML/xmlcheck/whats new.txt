@@ -1,0 +1,13 @@
+XML Check 
+http://www.xmlcheck.com
+Release Date: April 9 2013
+
+What's new for version 2.5.5
+-----------------------------
+
+1. Added Support for Google image/video/mobile/news sitemaps
+2. Minor bug fixes. 
+
+If you find any bugs or issues please report it to us at webmaster@xmlcheck.com. 
+
+Thank you for using XML Check software!

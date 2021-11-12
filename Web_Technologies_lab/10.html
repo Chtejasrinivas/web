@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>
+Random Sentence Creation
+</title>
+<style>
+#text-area
+{
+font-size:25px;
+color:red;
+}
+</style>
+</head>
+<body>
+<h1>Hey! There </h1>
+<textarea id="text-area" name="text-area" rows="20" cols="40">
+</textarea>
+</body>
+<script>
+let article=["the","a","one","some","any"];
+let noun=["boy","girl","dog","town","car"];
+let verb=["drove","jumped","ran","walked","skipped"];
+let preposition=["to","under","over","from","on"];
+let text_area=document.getElementById("text-area");
+function random(min,max)
+{
+return Math.floor(Math.random() *(max-min) + min); 
+}
+let art_first=[];
+let art_second=[];
+let article_final=[];
+for(i=0;i<article.length;i++)
+{
+art_first[i]=article[i].charAt(0).toUpperCase();
+art_second[i]=article[i].slice(1);
+}
+for(i=0;i<article.length;i++)
+{
+article_final[i]=art_first[i]+art_second[i];
+}
+//Article, noun, verb, preposition, article, and noun
+text_area.innerText=`${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.
+${article_final[random(0,4)]} ${noun[random(0,4)]} ${verb[random(0,4)]} ${preposition[random(0,4)]} ${article[random(0,4)]} ${noun[random(0,4)]}.`;
+</script>
+</html>
